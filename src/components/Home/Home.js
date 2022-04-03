@@ -1,19 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import useReviewHook from "../../Hook/useReviewHook";
 import ReviewCard from "../ReviewCard/ReviewCard";
 const Home = () => {
-  let [reviews, setReviews] = useState([]);
-  useEffect(() => {
-    fetch("data.json")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  }, []);
+  const [reviews, setReviews] = useReviewHook();
 
   let homeReviews = reviews.slice(0, 3);
+
+  const navigate = useNavigate();
 
   return (
     <section>
       <div className="container mx-auto ">
-        <div className="row flex gap-5 items-center h-[85vh]">
+        <div className="row flex gap-5 items-center h-[500px]">
           <div className="left-area w-7/12">
             <h1 className="text-6xl font-black text-blue-800">
               Make your life gorgeous with our sefety glasses.
@@ -45,7 +43,10 @@ const Home = () => {
             ))}
           </div>
           <div className="text-center my-10">
-            <button className="py-1 px-8 bg-indigo-600 text-white text-lg rounded-md">
+            <button
+              onClick={() => navigate("/reviews")}
+              className="py-1 px-8 bg-indigo-600 text-white text-lg rounded-md"
+            >
               See All Reviews
             </button>
           </div>
