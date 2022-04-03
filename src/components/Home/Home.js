@@ -41,8 +41,13 @@ const Home = () => {
           </h2>
           <div className="wrapper grid grid-cols-3 gap-5">
             {homeReviews.map((review) => (
-              <ReviewCard review={review}></ReviewCard>
+              <ReviewCard key={review.id} review={review}></ReviewCard>
             ))}
+          </div>
+          <div className="text-center my-10">
+            <button className="py-1 px-8 bg-indigo-600 text-white text-lg rounded-md">
+              See All Reviews
+            </button>
           </div>
         </div>
       </div>
