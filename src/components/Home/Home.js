@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ReviewCard from "../ReviewCard/ReviewCard";
 const Home = () => {
+  let [reviews, setReviews] = useState([]);
+  useEffect(() => {
+    fetch("data.json")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
+
+  let homeReviews = reviews.slice(0, 3);
+
   return (
     <section>
       <div className="container mx-auto ">
         <div className="row flex gap-5 items-center h-[85vh]">
           <div className="left-area w-7/12">
             <h1 className="text-6xl font-black text-blue-800">
-              Make your life gorgeous with our glasses.
+              Make your life gorgeous with our sefety glasses.
             </h1>
             <p className="text-xl my-7">
               Let us help you to explore your colorful world with our futuristic
@@ -26,7 +36,14 @@ const Home = () => {
 
         {/* home area customer review */}
         <div className="row py-5">
-          <div className="text-center text-3xl font-bold">Customer Reviews</div>
+          <h2 className="text-center text-3xl font-bold my-10">
+            Customer Reviews ({homeReviews.length})
+          </h2>
+          <div className="wrapper grid grid-cols-3 gap-5">
+            {homeReviews.map((review) => (
+              <ReviewCard review={review}></ReviewCard>
+            ))}
+          </div>
         </div>
       </div>
     </section>
