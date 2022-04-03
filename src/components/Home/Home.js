@@ -1,5 +1,4 @@
 import React from "react";
-
 const Home = () => {
   return (
     <section>
@@ -23,6 +22,11 @@ const Home = () => {
               alt="glasses"
             />
           </div>
+        </div>
+
+        {/* home area customer review */}
+        <div className="row py-5">
+          <div className="text-center text-3xl font-bold">Customer Reviews</div>
         </div>
       </div>
     </section>

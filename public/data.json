@@ -1,0 +1,39 @@
+[
+  {
+    "id": "6249de98db6a7e761f772798",
+    "name": "Robert Sweeney",
+    "review": "Awesome product one of the best product i have ever seen.",
+    "rating": "5"
+  },
+  {
+    "id": "6249de9808d5f896053c29f5",
+    "name": "Francis Bishop",
+    "review": "I am satisfied with their product they are awesome.",
+    "rating": "4"
+  },
+
+  {
+    "id": "6249de987ee913a921877e58",
+    "name": "Mamie Jackson",
+    "review": "Product is good but i think there is more area to upgrade",
+    "rating": "3"
+  },
+  {
+    "id": "6249de98dedabe06757863ab",
+    "name": "Riley Marshall",
+    "review": "Nice and good looking product. product design, flexibility all is good. nice experience.",
+    "rating": "5"
+  },
+  {
+    "id": "6249de98b8f8ee47f5888b9a",
+    "name": "Henrietta Lambert",
+    "review": "Bad experience after using a month it brokes",
+    "rating": "1"
+  },
+  {
+    "id": "6249de98ad26aa95fdc440ad",
+    "name": "Robyn Hamilton",
+    "review": "Number one product of the current world. really amazing product",
+    "rating": "5"
+  }
+]
