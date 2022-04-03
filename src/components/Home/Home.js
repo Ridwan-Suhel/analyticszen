@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import useReviewHook from "../../Hook/useReviewHook";
 import ReviewCard from "../ReviewCard/ReviewCard";
+import imageGlass from "../../assets/image/glasses.png";
+
 const Home = () => {
   const [reviews, setReviews] = useReviewHook();
 
@@ -25,10 +27,7 @@ const Home = () => {
             </button>
           </div>
           <div className="right-area w-5/12">
-            <img
-              src="https://templates.envytheme.com/busan/default/assets/img/eye-glass-image/1.png"
-              alt="glasses"
-            />
+            <img src={imageGlass} alt="glassImage" />
           </div>
         </div>
 
