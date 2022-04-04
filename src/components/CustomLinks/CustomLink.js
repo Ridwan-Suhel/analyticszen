@@ -6,7 +6,7 @@ function CustomLink({ children, to, ...props }) {
   let match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <div>
+    <>
       <Link
         style={{
           color: match ? "rgb(29 78 216)" : "#333",
@@ -16,7 +16,7 @@ function CustomLink({ children, to, ...props }) {
       >
         {children}
       </Link>
-    </div>
+    </>
   );
 }
 

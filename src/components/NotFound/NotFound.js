@@ -8,7 +8,7 @@ const NotFound = () => {
         Oops! Page Not Found.
       </h1>
       <img
-        className="w-[500px] mx-auto object-cover z-[-10] mt-[-70px] relative"
+        className="w-[500px] mx-auto object-cover z-[-10] md:mt-[-70px] relative"
         src={fourOfour}
         alt="notfound-img"
       />

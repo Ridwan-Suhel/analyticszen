@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import useReviewHook from "../../Hook/useReviewHook";
 import ReviewCard from "../ReviewCard/ReviewCard";
 import imageGlass from "../../assets/image/glasses.png";
+import "./Home.css";
 
 const Home = () => {
   const [reviews, setReviews] = useReviewHook();
@@ -11,11 +12,11 @@ const Home = () => {
   const navigate = useNavigate();
 
   return (
-    <section>
-      <div className="container mx-auto ">
+    <section className="home-area">
+      <div className="container px-4 mx-auto ">
         <div className="row flex gap-5 items-center h-[500px]">
-          <div className="left-area w-7/12">
-            <h1 className="text-6xl font-black text-blue-800">
+          <div className="left-area w-full md:w-7/12">
+            <h1 className="text-4xl lg:text-6xl font-bold lg:font-black text-blue-800">
               Make your life gorgeous with our sefety glasses.
             </h1>
             <p className="text-xl my-7">
@@ -26,7 +27,7 @@ const Home = () => {
               Live Demo
             </button>
           </div>
-          <div className="right-area w-5/12">
+          <div className="right-area w-full md:w-5/12">
             <img src={imageGlass} alt="glassImage" />
           </div>
         </div>
@@ -36,7 +37,7 @@ const Home = () => {
           <h2 className="text-center text-3xl font-bold my-10">
             Customer Reviews ({homeReviews.length})
           </h2>
-          <div className="wrapper grid grid-cols-3 gap-5">
+          <div className="wrapper grid md:grid-cols-3 gap-5">
             {homeReviews.map((review) => (
               <ReviewCard key={review.id} review={review}></ReviewCard>
             ))}

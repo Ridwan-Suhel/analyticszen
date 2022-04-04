@@ -1,0 +1,11 @@
+.home-area {
+}
+@media (max-width: 767px) {
+  .home-area .row {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .right-area {
+    margin: 50px 0px;
+  }
+}
